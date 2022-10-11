@@ -9,10 +9,12 @@
 <body>
     <h1>Berlatih String PHP</h1>
     <?php   
+        echo "<h3> Soal No 1</h3>";
+        
         /* 
             SOAL NO 1
-            Tunjukan dengan menggunakan echo berapa panjang dari string yang diberikan berikut! 
-            Tunjukkan juga jumlah kata di dalam kalimat tersebut! 
+            Tunjukan dengan menggunakan echo berapa panjang dari string yang diberikan berikut! Tunjukkan juga jumlah kata di dalam kalimat 
+tersebut! 
 
             Contoh: 
             $string = "PHP is never old";
@@ -20,22 +22,17 @@
             Panjang string: 16, 
             Jumlah kata: 4 
         */
-        
-        echo "<h3> Soal Contoh</h3>";
-        // --------------------------------------- //
-        // ini contoh
-        $string = "PHP is never old";
-        echo "Panjang string: ". strlen($string);
-        echo "<br>";
-        echo "Jumlah kata: " . str_word_count($string); 
-        // --------------------------------------- //
-
-        
-        echo "<h3> Soal No 1</h3>";
 
         $first_sentence = "Hello PHP!" ; // Panjang string 10, jumlah kata: 2
+        echo "Panjang String: ". strlen($first_sentence);
+        echo " jumlah kata: ". str_word_count($first_sentence);
+        echo " dari kata Hello PHP! ";
+        echo "<br>";
+        echo "<br>";
         $second_sentence = "I'm ready for the challenges"; // Panjang string: 28,  jumlah kata: 5
-        
+        echo "Panjang String: ". strlen($second_sentence);
+        echo " jumlah kata: ". str_word_count($second_sentence);
+        echo " dari kata I'm ready for the chalengges";
         echo "<h3> Soal No 2</h3>";
         /* 
             SOAL NO 2
@@ -48,15 +45,17 @@
         echo "<label>String: </label> \"$string2\" <br>";
         echo "Kata pertama: " . substr($string2, 0, 1) . "<br>" ; 
         // Lanjutkan di bawah ini
-        echo "Kata kedua: " ;
-        echo "<br> Kata Ketiga: " ;
+        echo "Kata kedua: " . substr($string2,2,4) ;
+        echo "<br> Kata Ketiga: " . substr($string2,7,3)   ;
+
         echo "<h3> Soal No 3 </h3>";
         /*
             SOAL NO 3
             Mengubah karakter atau kata yang ada di dalam sebuah string.
         */
         $string3 = "PHP is old but Good!";
-        echo "String: \"$string3\" "; 
+        echo "String: \"$string3\" " . "<br>"; 
+        echo "String di Ubah :" . str_replace("Good!", "Awesome", $string3);
         // OUTPUT : "PHP is old but awesome"
 
     ?>
